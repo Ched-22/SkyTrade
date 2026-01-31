@@ -408,9 +408,6 @@ const Cards = () => {
                 <button className="px-8 py-3 bg-white border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-all duration-200">
                     Carregar mais produtos
                 </button>
-                <button className="px-8 py-3 bg-white border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-all duration-200">
-                    Carregar mais produtos TESTE
-                </button>
             </div>
 
             {/* Banner promocional estilo Vinted */}
