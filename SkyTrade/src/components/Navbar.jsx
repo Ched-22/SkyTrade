@@ -64,13 +64,13 @@ export default function Navbar() {
         <nav className="w-full flex items-center p-3 bg-blue-200 hover:shadow-md">
             <div className="container mx-auto flex items-center justify-between md:justify-start">
                 {/* Logo */}
-                <div className="font-bold text-xl ml-10 mr-7">
-                    <a href="/">SkyTrade</a>
+                <div className="font-bold text-xl ml-10 mr-7 flex items-center">
+                    <a href="/" className="flex items-center">
+                        <p className="font-light flex items-center">Trade<p className="text-blue-600 text-2xl font-mono">2</p>Fly</p>
+                    </a>
                     {/* SVG Logo */}
                     <a href="/"><img src="/images/logo/skytrade-logo.svg" alt="SkyTrade Logo" className="h-7 w-auto ml-2 inline-block" /></a>
                 </div>
-
-                
 
                 {/* Search Bar com Sugestões */}
                 <div className="hidden md:flex relative items-center" ref={searchRef}>
@@ -158,98 +158,101 @@ export default function Navbar() {
                 {/* Links */}
                 {/* Menu Mobile Dropdown - Full Screen */}
                 {isMenuOpen && (
-                    <div className="md:hidden fixed inset-0 z-50 bg-blue-100 shadow-lg flex flex-col">
+                    <div className="md:hidden fixed inset-0 z-50 bg-white flex flex-col">
                         {/* Header do menu mobile */}
-                        <div className="flex items-center justify-between p-4 border-b">
-                            <div className="font-bold text-xl">
-                                <a href="/">SkyTrade</a>
-                                {/* SVG Logo */}
+                        <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-white shrink-0">
+                            <div className="font-bold text-xl flex items-center">
+                                <a href="/" className="flex items-center">
+                                    <p className="font-light flex items-center">Trade<p className="text-blue-600 text-2xl font-mono">2</p>Fly</p>
+                                </a>
                                 <a href="/"><img src="/images/logo/skytrade-logo.svg" alt="SkyTrade Logo" className="h-7 w-auto ml-2 inline-block" /></a>
                             </div>
                             <button
                                 onClick={() => setIsMenuOpen(false)}
-                                className="p-2 text-2xl hover:bg-gray-100 rounded-full"
+                                className="p-2 text-2xl hover:bg-gray-100 rounded-full text-gray-700"
                             >
                                 ✕
                             </button>
                         </div>
                         
-                        {/* Itens do menu */}
-                        <ul className="py-4 h-[calc(100vh-80px)] overflow-y-auto">
-                            {/* Botão Login no final */}
-                            <li className=" px-6">
-                                <button 
-                                    className="w-full text-xl py-4 bg-transparent border border-blue-600 hover:border-blue-600 text-blue-600 hover:text-white px-6 rounded-lg hover:bg-blue-600 font-bold transition-colors"
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    Criar conta | Login
-                                </button>
-                            </li>
+                        {/* Conteúdo principal - ESSA é a parte que rola */}
+                        <div className="flex-1 overflow-y-auto">
+                            <div className="p-4">
+                                {/* Botão Login - no topo como no Vinted */}
+                                <div className="mb-6">
+                                    <button 
+                                        className="w-full py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors text-lg"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        Criar conta | Login
+                                    </button>
+                                </div>
 
-                            {/* Botão vender no final */}
-                            <li className="mt-2 px-6">
-                                <button 
-                                    className="w-full text-xl py-4 bg-transparent border border-blue-600 hover:border-blue-600 text-blue-600 hover:text-white px-6 rounded-lg hover:bg-blue-600 font-bold transition-colors"
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    Vender agora
-                                </button>
-                            </li>
+                                {/* Botão Vender - estilo Vinted */}
+                                <div className="mb-8">
+                                    <button 
+                                        className="w-full py-3 bg-white border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors text-lg"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        Vender agora
+                                    </button>
+                                </div>
 
-                            <li>
-                                <a 
-                                    href="/" 
-                                    className="flex mt-8 items-center px-6 py-4 hover:bg-blue-50 text-lg"
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    <span className="mr-3">📦</span>
-                                    Browse
-                                </a>
-                            </li>
-                            <li>
-                                <a 
-                                    href="/sell" 
-                                    className="flex items-center px-6 py-4 hover:bg-blue-50 text-lg"
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    <span className="mr-3">💰</span>
-                                    Sell
-                                </a>
-                            </li>
-                            <li>
-                                <a 
-                                    href="/inbox" 
-                                    className="flex items-center px-6 py-4 hover:bg-blue-50 text-lg"
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    <span className="mr-3">📨</span>
-                                    Inbox
-                                </a>
-                            </li>
-                            <li>
-                                <a 
-                                    href="/favorites" 
-                                    className="flex items-center px-6 py-4 hover:bg-blue-50 text-lg"
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    <span className="mr-3">❤️</span>
-                                    Favorites
-                                </a>
-                            </li>
-                            <li>
-                                <a 
-                                    href="/profile" 
-                                    className="flex items-center px-6 py-4 hover:bg-blue-50 text-lg"
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    <span className="mr-3">👤</span>
-                                    Profile
-                                </a>
-                            </li>
-                        </ul>
-                    <Footer />
+                                {/* Links do menu - estilo Vinted */}
+                                <div className="space-y-1">
+                                    <a 
+                                        href="/" 
+                                        className="flex items-center px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-800 text-lg"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        <span className="mr-3 text-xl">📦</span>
+                                        Navegar
+                                    </a>
+                                    <a 
+                                        href="/sell" 
+                                        className="flex items-center px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-800 text-lg"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        <span className="mr-3 text-xl">💰</span>
+                                        Vender
+                                    </a>
+                                    <a 
+                                        href="/inbox" 
+                                        className="flex items-center px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-800 text-lg"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        <span className="mr-3 text-xl">📨</span>
+                                        Mensagens
+                                    </a>
+                                    <a 
+                                        href="/favorites" 
+                                        className="flex items-center px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-800 text-lg"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        <span className="mr-3 text-xl">❤️</span>
+                                        Favoritos
+                                    </a>
+                                    <a 
+                                        href="/profile" 
+                                        className="flex items-center px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-800 text-lg"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        <span className="mr-3 text-xl">👤</span>
+                                        Perfil
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            {/* O Footer vai aqui DENTRO do container de scroll */}
+                            {/* Ele só aparece quando você rola até o final */}
+                            <div className="mt-8 border-t border-gray-200">
+                                <div className="p-4">
+                                    <Footer />
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                )}
+                )}    
             </div>
         </nav>
     );
