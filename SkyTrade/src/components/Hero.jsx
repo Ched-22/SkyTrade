@@ -1,8 +1,13 @@
 import React from 'react';
+import Searchbar from './Searchbar.jsx';
 
 const Hero = () => {
     return (
         <section>
+            <div className="container flex items-center justify-center mx-auto px-4 md:hidden">
+                <Searchbar  />
+            </div>
+            
             <div 
                 className="w-full border-b min-h-[500px] md:min-h-[600px] relative"
                 style={{ 

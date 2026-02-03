@@ -141,7 +141,7 @@ export default function Navbar() {
                     <UserDropdown />
                     {/* Botão Login - Desktop */}
                     <a href="/login">
-                        <button className="hidden md:flex ml-4 bg-transparent border border-blue-600 hover:border-blue-600 text-blue-600 hover:text-white px-6 py-1 rounded-lg hover:bg-blue-600 font-bold transition-colors" >
+                        <button className="hidden md:flex ml-4 bg-transparent border border-blue-600 hover:border-blue-600 text-blue-600 hover:text-white px-6 py-1 rounded-lg hover:bg-blue-600 font-bold transition-colors hover:shadow-lg hover:scale-105 hover:duration-300 hover:ease-in-out" >
                             Criar conta | Login
                         </button>
                     </a>
@@ -181,7 +181,7 @@ export default function Navbar() {
                                 {/* Botão Login - no topo como no Vinted */}
                                 <div className="mb-6">
                                     <button 
-                                        className="w-full py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors text-lg"
+                                        className="w-96 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors text-lg hover:shadow-lg hover:scale-105 hover:duration-300 hover:ease-in-out"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         Criar conta | Login
@@ -191,7 +191,7 @@ export default function Navbar() {
                                 {/* Botão Vender - estilo Vinted */}
                                 <div className="mb-8">
                                     <button 
-                                        className="w-full py-3 bg-white border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors text-lg"
+                                        className="w-96 py-3 bg-white border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors text-lg hover:shadow-lg hover:scale-105 hover:duration-300 hover:ease-in-out"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         Vender agora
