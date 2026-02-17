@@ -66,11 +66,8 @@ export default function Navbar() {
             <div className="container mx-auto flex items-center justify-between md:justify-start">
                 {/* Logo */}
                 <div className="font-bold text-xl ml-10 mr-7 flex items-center">
-                    <Link to="/" className="flex items-center">
-                        <p className="font-light flex items-center">Trade<p className="text-blue-600 text-2xl font-mono">2</p>Fly</p>
-                    </Link>
                     {/* SVG Logo */}
-                    <Link to="/"><img src="/images/logo/skytrade-logo.svg" alt="SkyTrade Logo" className="h-7 w-auto ml-2 inline-block" /></Link>
+                    <Link to="/"><img src="/images/logo/logo-atual.png" alt="SkyTrade Logo" className="h-7 w-auto ml-2 inline-block" /></Link>
                 </div>
 
                 {/* Search Bar com Sugestões */}
@@ -217,7 +214,7 @@ export default function Navbar() {
                                         <span className="mr-3 text-xl">💰</span>
                                         Vender
                                     </Link>
-                                    <Link to="/inbox" 
+                                    <Link to="/chat" 
                                         className="flex items-center px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-800 text-lg"
                                         onClick={() => setIsMenuOpen(false)}
                                     >

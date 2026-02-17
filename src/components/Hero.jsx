@@ -9,7 +9,7 @@ const Hero = () => {
             </div>
             
             <div 
-                className="w-full border-b min-h-[500px] md:min-h-[600px] relative"
+                className="w-full py-16 border-b min-h-[500px] md:min-h-[600px] relative"
                 style={{ 
                     backgroundImage: "url('/images/banners/best-sellers.jpg')",
                     backgroundSize: 'cover',

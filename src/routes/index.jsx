@@ -7,14 +7,12 @@ import Home from '../pages/Home.jsx';
 import Login from '../pages/Login.jsx';
 import Register from '../pages/Register';
 import Chat from '../pages/Chat.jsx';
-//import Products from '../pages/Products';
+import NotFound from '../pages/NotFound';
+import Products from '../pages/Products';
 //import ProductDetail from '../pages/ProductDetail';
 //import Cart from '../pages/Cart';
 //import Profile from '../pages/Profile';
 //import Sell from '../pages/Sell';
-
-// Componente de rota não encontrada (opcional)
-import NotFound from '../pages/NotFound';
 
 const AppRoutes = () => {
     return (

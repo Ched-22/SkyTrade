@@ -72,11 +72,6 @@ export default function Chat() {
         return () => clearTimeout(timer);
     }, [isTyping]);
 
-    // Rolar para baixo automaticamente
-    useEffect(() => {
-        scrollToBottom();
-    }, [messages]);
-
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
     };
@@ -125,8 +120,8 @@ export default function Chat() {
     const activeConversation = conversations.find(c => c.id === activeChat);
 
     return (
-        <div className="min-h-screen bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 py-8">
+        <div className=" bg-gray-50">
+            <div className="mx-auto px-4 py-8">
                 <div className="mb-6">
                     <h1 className="text-3xl font-bold text-gray-900">Mensagens</h1>
                     <p className="text-gray-600 mt-1">Gerencie suas conversas e negociações</p>
@@ -134,7 +129,7 @@ export default function Chat() {
 
                 <div className="flex bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
                     {/* Lista de conversas - lado esquerdo */}
-                    <div className="w-1/3 border-r border-gray-200">
+                    <div className="hidden md:block w-auto border-r border-gray-200">
                         <div className="p-4 border-b border-gray-200">
                             <div className="relative">
                                 <input
@@ -148,7 +143,7 @@ export default function Chat() {
                             </div>
                         </div>
 
-                        <div className="overflow-y-auto h-[calc(100vh-250px)]">
+                        <div className="overflow-y-auto flex-1">
                             {conversations.map((conversation) => (
                                 <div
                                     key={conversation.id}
@@ -171,7 +166,7 @@ export default function Chat() {
                                             )}
                                         </div>
                                         
-                                        <div className="flex-1 min-w-0">
+                                        <div className="flex-1 ">
                                             <div className="flex justify-between items-start">
                                                 <h3 className="font-semibold text-gray-900 truncate">
                                                     {conversation.name}
@@ -208,7 +203,7 @@ export default function Chat() {
                     </div>
 
                     {/* Área do chat - lado direito */}
-                    <div className="w-2/3 flex flex-col">
+                    <div className="flex flex-col flex-1">
                         {/* Cabeçalho do chat */}
                         <div className="p-4 border-b border-gray-200 flex items-center justify-between bg-white">
                             <div className="flex items-center space-x-3">
@@ -243,7 +238,7 @@ export default function Chat() {
                         </div>
 
                         {/* Informações do produto */}
-                        <div className="p-4 border-b border-gray-200 bg-blue-50">
+                        <div className="p-4 border-b border-gray-200 bg-blue-50 ">
                             <div className="flex items-center space-x-3">
                                 <img 
                                     src={activeConversation?.productImage} 
@@ -265,7 +260,7 @@ export default function Chat() {
                         </div>
 
                         {/* Área das mensagens */}
-                        <div className="flex-1 overflow-y-auto p-4 bg-gray-50 h-[calc(100vh-400px)]">
+                        <div className="flex-1 overflow-y-auto p-4 bg-gray-50">
                             {messages.map((message) => (
                                 <div
                                     key={message.id}
