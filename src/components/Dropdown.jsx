@@ -17,7 +17,7 @@ const UserDropdown = () => {
     }, []);
 
     const menuItems = [
-        { icon: '👤', label: 'Perfil', href: '/perfil' },
+        { icon: '👤', label: 'Perfil', href: '/profile' },
         //{ icon: '👥', label: 'Convidar amigos', href: '/convidar' },
         { icon: '⚙️', label: 'Configurações', href: '/configuracoes' },
         //{ icon: '🎨', label: 'Personalização', href: '/personalizacao' },
@@ -31,7 +31,7 @@ const UserDropdown = () => {
         <div className="relative" ref={dropdownRef}>
             {/* Botão do usuário */}
             <button
-                className="p-2 rounded-md text-xl text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors"
+                className="p-2 rounded-md text-xl text-gray-700 hover:text-blue-600 hover:bg-gray-300 transition-colors"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             >
                 <img src="/images/icons/user.svg" alt="Ícone perfil" className="h-6 w-6" />

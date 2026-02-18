@@ -62,7 +62,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="w-full flex items-center p-3 bg-blue-200 hover:shadow-md">
+        <nav className="w-full flex items-center p-3 hover:shadow-md">
             <div className="container mx-auto flex items-center justify-between md:justify-start">
                 {/* Logo */}
                 <div className="font-bold text-xl ml-10 mr-7 flex items-center">
@@ -76,9 +76,9 @@ export default function Navbar() {
                         <input
                             type="text"
                             placeholder="Buscar itens..."
-                            className="w-full px-4 py-2 pl-10 pr-10 rounded-lg border border-gray-300 
+                            className="w-full px-4 py-2 pl-10 pr-10 rounded-lg border border-gray-500 bg-gray-800 
                                     focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
-                                    placeholder-gray-500 text-gray-700"
+                                    placeholder-gray-500 text-gray-500"
                             value={searchQuery}
                             onChange={handleSearchChange}
                             onKeyDown={handleKeyDown}
@@ -115,7 +115,7 @@ export default function Navbar() {
 
                     {/* Ícone do carrinho de compras */}
                     <button
-                        className="p-2 rounded-md text-xl text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors"
+                        className="p-2 rounded-md text-xl text-gray-700 hover:text-blue-600 hover:bg-gray-300 transition-colors"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}>
                         <Link to="/carrinho"><img src="/images/icons/carrinho.svg" alt="Carrinho de Compras" className="h-6 w-6" /></Link>
                         
@@ -123,14 +123,14 @@ export default function Navbar() {
 
                     {/* Ícone dos favoritos */}
                     <button
-                        className="p-2 rounded-md text-xl text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors"
+                        className="p-2 rounded-md text-xl text-gray-700 hover:text-blue-600 hover:bg-gray-300 transition-colors"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}>
                         <Link to="/favoritos"><img src="/images/icons/fav.svg" alt="Ícone favoritos" className="h-6 w-6" /></Link>
                     </button>
                     
                     {/* Ícone do chat */}
                     <button
-                        className="p-2 rounded-md text-xl text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors"
+                        className="p-2 rounded-md text-xl text-gray-700 hover:text-blue-600 hover:bg-gray-300 transition-colors"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}>
                         <Link to="/chat"><img src="/images/icons/chat.svg" alt="Ícone chat" className="h-6 w-6" /></Link>
                     </button>                    
