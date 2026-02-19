@@ -1,5 +1,6 @@
 import React from 'react';
 import Searchbar from './Searchbar.jsx';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return (
@@ -15,6 +16,7 @@ const Hero = () => {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
+                    backgroundAttachment: 'fixed',
                 }}
             >
                 {/* Overlay para controlar opacidade */}
@@ -37,9 +39,11 @@ const Hero = () => {
                             
                             {/* Botões */}
                             <div className="flex flex-col sm:flex-row justify-center gap-4">
-                                <button className="bg-blue-600 hover:bg-blue-200 text-white hover:text-blue-600 font-bold py-4 px-10 rounded-lg text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:scale-105">
-                                    Vender agora
-                                </button>
+                                <Link to="/sell">
+                                    <button className="bg-blue-600 hover:bg-blue-200 text-white hover:text-blue-600 font-bold py-4 px-10 rounded-lg text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:scale-105">
+                                        Vender agora
+                                    </button>
+                                </Link>
                                 <button className="bg-white hover:bg-blue-600 hover:text-white border-2 border-blue-600 font-bold py-4 px-10 rounded-lg text-lg transition-colors duration-300 hover:shadow-lg hover:scale-105">
                                     Descubra como funciona
                                 </button>

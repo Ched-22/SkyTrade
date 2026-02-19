@@ -10,9 +10,9 @@ import Chat from '../pages/Chat.jsx';
 import NotFound from '../pages/NotFound.jsx';
 import Products from '../pages/Products.jsx';
 import Profile from '../pages/Profile.jsx';
+import SellPage from '../pages/SellPage.jsx';
 //import ProductDetail from '../pages/ProductDetail';
 //import Cart from '../pages/Cart';
-//import Sell from '../pages/Sell';
 
 const AppRoutes = () => {
     return (
@@ -27,6 +27,7 @@ const AppRoutes = () => {
             {/* Outras rotas */}
             <Route path="/chat" element={<Chat />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/sell" element={<SellPage />} />
             {/* 
             <Route path="/products" element={<Products />} />
             <Route path="/products/:id" element={<ProductDetail />} />

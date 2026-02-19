@@ -1,5 +1,6 @@
 // src/components/Cards.jsx
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Cards = () => {
     // Estado para controlar produtos curtidos
@@ -417,9 +418,11 @@ const Cards = () => {
                     <p className="text-xl mb-6 opacity-90 text-gray-700">
                         Ganha dinheiro extra e dá uma nova vida às tuas peças
                     </p>
-                    <button className="px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-blue-700 hover:text-white transition-colors duration-200 hover:scale-105">
-                        Começar a vender
-                    </button>
+                    <Link to="/sell">
+                        <button className="px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-blue-700 hover:text-white transition-colors duration-200 hover:scale-105">
+                            Começar a vender
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
