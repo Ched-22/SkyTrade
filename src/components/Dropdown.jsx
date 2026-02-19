@@ -19,7 +19,7 @@ const UserDropdown = () => {
     const menuItems = [
         { icon: '👤', label: 'Perfil', href: '/profile' },
         //{ icon: '👥', label: 'Convidar amigos', href: '/convidar' },
-        { icon: '⚙️', label: 'Configurações', href: '/configuracoes' },
+        { icon: '⚙️', label: 'Configurações', href: '/settings' },
         //{ icon: '🎨', label: 'Personalização', href: '/personalizacao' },
         { icon: '💰', label: 'Saldo', value: 'R$ 0,00', href: '/saldo' },
         { icon: '📦', label: 'Os meus pedidos', href: '/pedidos' },

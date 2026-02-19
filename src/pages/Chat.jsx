@@ -121,7 +121,7 @@ export default function Chat() {
 
     return (
         <div className=" bg-gray-50">
-            <div className="mx-auto px-4 py-8">
+            <div className="mx-auto md:mx-56 px-4 py-8">
                 <div className="mb-6">
                     <h1 className="text-3xl font-bold text-gray-900">Mensagens</h1>
                     <p className="text-gray-600 mt-1">Gerencie suas conversas e negociações</p>

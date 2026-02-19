@@ -125,10 +125,10 @@ export default function Settings() {
 
                                     {/* Grid de campos */}
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        {/* Nome de utilizador */}
+                                        {/* Username */}
                                         <div>
                                             <label className="block text-sm font-medium text-gray-700 mb-2">
-                                                Nome de utilizador <span className="text-red-500">*</span>
+                                                Username <span className="text-red-500">*</span>
                                             </label>
                                             <input
                                                 type="text"
@@ -161,7 +161,7 @@ export default function Settings() {
                                         {/* Nome */}
                                         <div>
                                             <label className="block text-sm font-medium text-gray-700 mb-2">
-                                                Primeiro nome
+                                                Nome
                                             </label>
                                             <input
                                                 type="text"
@@ -172,10 +172,10 @@ export default function Settings() {
                                             />
                                         </div>
 
-                                        {/* Apelido */}
+                                        {/* Sobrenome */}
                                         <div>
                                             <label className="block text-sm font-medium text-gray-700 mb-2">
-                                                Apelido
+                                                Sobrenome
                                             </label>
                                             <input
                                                 type="text"
