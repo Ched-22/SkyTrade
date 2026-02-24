@@ -12,6 +12,7 @@ import Products from '../pages/Products.jsx';
 import Profile from '../pages/Profile.jsx';
 import SellPage from '../pages/SellPage.jsx';
 import Settings from '../pages/Settings.jsx';
+import ProductDetail from '../pages/ProductDetail.jsx';
 //import ProductDetail from '../pages/ProductDetail';
 //import Cart from '../pages/Cart';
 
@@ -30,6 +31,7 @@ const AppRoutes = () => {
             <Route path="/profile" element={<Profile />} />
             <Route path="/sell" element={<SellPage />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/products/:id" element={<ProductDetail />} />
             {/* 
             <Route path="/products" element={<Products />} />
             <Route path="/products/:id" element={<ProductDetail />} />

@@ -161,7 +161,7 @@ export default function Navbar() {
                         <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-white shrink-0">
                             <div className="font-bold text-xl flex items-center">
                                 <Link to="/" className="flex items-center">
-                                    <p className="font-light flex items-center">Trade<p className="text-blue-600 text-2xl font-mono">2</p>Fly</p>
+                                    <span className="font-light flex items-center">Trade<span className="text-blue-600 text-2xl font-mono">2</span>Fly</span>
                                 </Link>
                                 <Link to="/"><img src="/images/logo/skytrade-logo.svg" alt="SkyTrade Logo" className="h-7 w-auto ml-2 inline-block" /></Link>
                             </div>
@@ -190,16 +190,25 @@ export default function Navbar() {
 
                                 {/* Botão Vender - estilo Vinted */}
                                 <div className="mb-8">
-                                    <button 
-                                        className="w-96 py-3 bg-white border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors text-lg hover:shadow-lg hover:scale-105 hover:duration-300 hover:ease-in-out"
-                                        onClick={() => setIsMenuOpen(false)}
-                                    >
-                                        Vender agora
-                                    </button>
+                                    <Link to="/sell">
+                                        <button 
+                                            className="w-96 py-3 bg-white border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors text-lg hover:shadow-lg hover:scale-105 hover:duration-300 hover:ease-in-out"
+                                            onClick={() => setIsMenuOpen(false)}
+                                        >
+                                            Vender agora
+                                        </button>
+                                    </Link>
                                 </div>
 
                                 {/* Links do menu - estilo Vinted */}
                                 <div className="space-y-1">
+                                    <Link to="/profile" 
+                                        className="flex items-center px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-800 text-lg"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        <span className="mr-3 text-xl">👤</span>
+                                        Perfil
+                                    </Link>
                                     <Link to="/" 
                                         className="flex items-center px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-800 text-lg"
                                         onClick={() => setIsMenuOpen(false)}
@@ -228,13 +237,14 @@ export default function Navbar() {
                                         <span className="mr-3 text-xl">❤️</span>
                                         Favoritos
                                     </Link>
-                                    <Link to="/profile" 
+                                    <Link to="/settings" 
                                         className="flex items-center px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-800 text-lg"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
-                                        <span className="mr-3 text-xl">👤</span>
-                                        Perfil
+                                        <span className="mr-3 text-xl">⚙️</span>
+                                        Configurações
                                     </Link>
+                                    
                                 </div>
                             </div>
                             

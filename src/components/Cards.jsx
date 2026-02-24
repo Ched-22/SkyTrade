@@ -223,7 +223,7 @@ const Cards = () => {
     };
 
     // Filtros de categoria
-    const categories = ["Todos", "Calçado", "Vestuário", "Tecnologia", "Casa", "Desporto", "Acessórios"];
+    const categories = ["Todos", "Velames", "Vestuário", "Tecnologia", "Capacetes", "Acessórios"];
     const [activeFilter, setActiveFilter] = useState("Todos");
 
     // Filtrar produtos por categoria
@@ -280,7 +280,7 @@ const Cards = () => {
                 {filteredProducts.map((product) => (
                     <div 
                         key={product.id} 
-                        className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group cursor-pointer"
+                        className="bg-gray-900 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group cursor-pointer"
                     >
                         {/* Container da imagem */}
                         <div className="relative overflow-hidden">
@@ -343,11 +343,11 @@ const Cards = () => {
                             {/* Preço */}
                             <div className="mb-3">
                                 <div className="flex items-center gap-2">
-                                    <span className="text-2xl font-bold text-gray-900">
+                                    <span className="text-2xl font-bold text-gray-200">
                                         {formatPrice(product.price)}
                                     </span>
                                     {product.originalPrice && (
-                                        <span className="text-sm text-gray-500 line-through">
+                                        <span className="text-sm text-gray-200 line-through">
                                             {formatPrice(product.originalPrice)}
                                         </span>
                                     )}
@@ -360,7 +360,7 @@ const Cards = () => {
                             </div>
 
                             {/* Título do produto */}
-                            <h3 className="font-medium text-gray-900 mb-2 line-clamp-2 h-12 leading-snug">
+                            <h3 className="font-medium text-gray-200 mb-2 line-clamp-2 h-12 leading-snug">
                                 {product.title}
                             </h3>
 
@@ -373,7 +373,7 @@ const Cards = () => {
                                         </span>
                                     </div>
                                     <div>
-                                        <p className="text-sm font-medium text-gray-900">@{product.seller}</p>
+                                        <p className="text-sm font-medium text-gray-200">@{product.seller}</p>
                                         <p className="text-xs text-gray-500 flex items-center gap-1">
                                             <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                                                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
@@ -414,8 +414,8 @@ const Cards = () => {
             {/* Banner promocional estilo Vinted */}
             <div className="mt-16  rounded-2xl p-8 text-white">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl font-bold mb-4 text-gray-800">Vende o que já não usas!</h2>
-                    <p className="text-xl mb-6 opacity-90 text-gray-700">
+                    <h2 className="text-3xl font-bold mb-4 text-gray-300">Vende o que já não usas!</h2>
+                    <p className="text-xl mb-6 opacity-90 text-gray-200">
                         Ganha dinheiro extra e dá uma nova vida às tuas peças
                     </p>
                     <Link to="/sell">
