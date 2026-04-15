@@ -29,22 +29,22 @@ export default function SellPage() {
     const colors = ['Preto', 'Branco', 'Cinzento', 'Azul', 'Vermelho', 'Verde', 'Amarelo', 'Rosa', 'Roxo'];
 
     return (
-        <div className="min-h-screen bg-gray-50 py-8">
+        <div className="min-h-screen py-8">
             <div className="max-w-4xl mx-auto px-4">
                 {/* Cabeçalho */}
                 <div className="mb-8">
-                    <h1 className="text-3xl font-bold text-gray-900">Vender artigo</h1>
-                    <p className="text-gray-600 mt-2">Preenche os detalhes do teu anúncio</p>
+                    <h1 className="text-3xl font-bold text-gray-300">Vender artigo</h1>
+                    <p className="text-gray-500 mt-2">Preenche os detalhes do teu anúncio</p>
                 </div>
 
                 {/* Formulário principal */}
                 <div className="space-y-8">
                     {/* Secção de Fotos - Destaque visual como no Vinted */}
-                    <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                        <h2 className="text-lg font-semibold text-gray-900 mb-4">Fotos</h2>
+                    <div className="bg-gray-800 rounded-xl shadow-sm border border-gray-700 p-6">
+                        <h2 className="text-lg font-semibold text-gray-300 mb-4">Fotos</h2>
                         <div className="grid grid-cols-3 sm:grid-cols-5 gap-4">
                             {/* Botão de adicionar foto */}
-                            <label className="aspect-square border-2 border-dashed border-gray-300 rounded-xl flex flex-col items-center justify-center gap-2 cursor-pointer hover:border-blue-500 hover:bg-blue-50 transition-colors">
+                            <label className="aspect-square border-2 border-dashed border-gray-700 rounded-xl flex flex-col items-center justify-center gap-2 cursor-pointer hover:border-blue-500 hover:bg-blue-100 transition-colors">
                                 <input
                                     type="file"
                                     multiple
@@ -59,7 +59,7 @@ export default function SellPage() {
                             </label>
                             {/* Placeholders para fotos adicionadas (exemplo) */}
                             {[1, 2, 3].map((i) => (
-                                <div key={i} className="aspect-square bg-gray-100 rounded-xl flex items-center justify-center">
+                                <div key={i} className="aspect-square bg-gray-700 rounded-xl flex items-center justify-center">
                                     <svg className="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                     </svg>
@@ -70,12 +70,12 @@ export default function SellPage() {
                     </div>
 
                     {/* Secção de Informações Básicas */}
-                    <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                        <h2 className="text-lg font-semibold text-gray-900 mb-4">Informação básica</h2>
-                        
+                    <div className="bg-gray-800 rounded-xl shadow-sm border border-gray-700 p-6">
+                        <h2 className="text-lg font-semibold text-gray-300 mb-4">Informação básica</h2>
+
                         {/* Título */}
                         <div className="mb-4">
-                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                            <label className="block text-sm font-medium text-gray-300 mb-2">
                                 Título <span className="text-red-500">*</span>
                             </label>
                             <input
@@ -83,7 +83,7 @@ export default function SellPage() {
                                 value={formData.title}
                                 onChange={(e) => setFormData({...formData, title: e.target.value})}
                                 placeholder="Ex.: Vestido Zara novo com etiqueta"
-                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                className="w-full px-4 py-2 bg-gray-700 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 maxLength="100"
                             />
                             <p className="text-xs text-gray-500 mt-1">{formData.title.length}/100 caracteres</p>
@@ -91,7 +91,7 @@ export default function SellPage() {
 
                         {/* Descrição */}
                         <div className="mb-4">
-                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                            <label className="block text-sm font-medium text-gray-300 mb-2">
                                 Descrição
                             </label>
                             <textarea
@@ -99,7 +99,7 @@ export default function SellPage() {
                                 onChange={(e) => setFormData({...formData, description: e.target.value})}
                                 placeholder="Descreve o artigo, o seu estado, medidas, etc."
                                 rows="4"
-                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                className="w-full px-4 py-2 bg-gray-700 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 maxLength="1000"
                             />
                             <p className="text-xs text-gray-500 mt-1">{formData.description.length}/1000 caracteres</p>
@@ -107,7 +107,7 @@ export default function SellPage() {
 
                         {/* Preço */}
                         <div className="mb-4">
-                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                            <label className="block text-sm font-medium text-gray-300 mb-2">
                                 Preço (R$) <span className="text-red-500">*</span>
                             </label>
                             <div className="relative">
@@ -119,7 +119,7 @@ export default function SellPage() {
                                     value={formData.price}
                                     onChange={(e) => setFormData({...formData, price: e.target.value})}
                                     placeholder="0,00"
-                                    className="w-full pl-8 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    className="w-full pl-8 pr-4 py-2 bg-gray-700 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 />
                             </div>
                             <div className="flex items-center mt-2">
@@ -138,19 +138,19 @@ export default function SellPage() {
                     </div>
 
                     {/* Secção de Detalhes */}
-                    <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                        <h2 className="text-lg font-semibold text-gray-900 mb-4">Detalhes</h2>
+                    <div className="bg-gray-800 rounded-xl shadow-sm border border-gray-700 p-6">
+                        <h2 className="text-lg font-semibold text-gray-300 mb-4">Detalhes</h2>
 
                         {/* Categoria */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2">
+                                <label className="block text-sm font-medium text-gray-300 mb-2">
                                     Categoria <span className="text-red-500">*</span>
                                 </label>
                                 <select
                                     value={formData.category}
                                     onChange={(e) => setFormData({...formData, category: e.target.value})}
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    className="w-full px-4 py-2 bg-gray-700 text-gray-300 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 >
                                     <option value="">Seleciona uma categoria</option>
                                     {categories.map(cat => (
@@ -161,7 +161,7 @@ export default function SellPage() {
 
                             {/* Marca */}
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2">
+                                <label className="block text-sm font-medium text-gray-300 mb-2">
                                     Marca
                                 </label>
                                 <input
@@ -169,7 +169,7 @@ export default function SellPage() {
                                     value={formData.brand}
                                     onChange={(e) => setFormData({...formData, brand: e.target.value})}
                                     placeholder="Ex.: Zara, Nike, Adidas..."
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    className="w-full px-4 py-2 bg-gray-700 text-gray-300 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 />
                             </div>
                         </div>
@@ -177,13 +177,13 @@ export default function SellPage() {
                         {/* Tamanho e Condição */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2">
+                                <label className="block text-sm font-medium text-gray-300 mb-2">
                                     Tamanho
                                 </label>
                                 <select
                                     value={formData.size}
                                     onChange={(e) => setFormData({...formData, size: e.target.value})}
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    className="w-full px-4 py-2 bg-gray-700 text-gray-300 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 >
                                     <option value="">Seleciona um tamanho</option>
                                     {sizes.map(size => (
@@ -193,13 +193,13 @@ export default function SellPage() {
                             </div>
 
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2">
+                                <label className="block text-sm font-medium text-gray-300 mb-2">
                                     Condição <span className="text-red-500">*</span>
                                 </label>
                                 <select
                                     value={formData.condition}
                                     onChange={(e) => setFormData({...formData, condition: e.target.value})}
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    className="w-full px-4 py-2 bg-gray-700 text-gray-300 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 >
                                     <option value="">Seleciona a condição</option>
                                     {conditions.map(cond => (
@@ -212,13 +212,13 @@ export default function SellPage() {
                         {/* Cor e Material */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2">
+                                <label className="block text-sm font-medium text-gray-300 mb-2">
                                     Cor
                                 </label>
                                 <select
                                     value={formData.color}
                                     onChange={(e) => setFormData({...formData, color: e.target.value})}
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    className="w-full px-4 py-2 bg-gray-700 text-gray-300 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 >
                                     <option value="">Seleciona uma cor</option>
                                     {colors.map(color => (
@@ -228,7 +228,7 @@ export default function SellPage() {
                             </div>
 
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2">
+                                <label className="block text-sm font-medium text-gray-300 mb-2">
                                     Material
                                 </label>
                                 <input
@@ -236,37 +236,37 @@ export default function SellPage() {
                                     value={formData.material}
                                     onChange={(e) => setFormData({...formData, material: e.target.value})}
                                     placeholder="Ex.: Algodão, Pele, Sintético..."
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    className="w-full px-4 py-2 bg-gray-700 text-gray-300 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 />
                             </div>
                         </div>
                     </div>
 
                     {/* Secção de Envio */}
-                    <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                        <h2 className="text-lg font-semibold text-gray-900 mb-4">Métodos de envio</h2>
+                    <div className="bg-gray-800 rounded-xl shadow-sm border border-gray-700 p-6">
+                        <h2 className="text-lg font-semibold text-gray-300 mb-4">Métodos de envio</h2>
                         
                         <div className="space-y-3">
-                            <label className="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <label className="flex items-center p-3 text-gray-300 border border-gray-700 rounded-lg hover:bg-gray-700 cursor-pointer">
                                 <input
                                     type="checkbox"
                                     checked={formData.isShippingAvailable}
                                     onChange={(e) => setFormData({...formData, isShippingAvailable: e.target.checked})}
-                                    className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                                    className="w-4 h-4 text-blue-600 border-gray-700 rounded focus:ring-blue-500"
                                 />
                                 <div className="ml-3">
-                                    <p className="text-sm font-medium text-gray-900">Envio rápido</p>
+                                    <p className="text-sm font-medium text-gray-300">Envio rápido</p>
                                     <p className="text-xs text-gray-500">Em até 5 dias úteis</p>
                                 </div>
                             </label>
                             
-                            <label className="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <label className="flex items-center p-3 border border-gray-700 rounded-lg hover:bg-gray-700 cursor-pointer">
                                 <input
                                     type="checkbox"
-                                    className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                                    className="w-4 h-4 text-blue-600 border-gray-700 rounded focus:ring-blue-500"
                                 />
                                 <div className="ml-3">
-                                    <p className="text-sm font-medium text-gray-900">Envio padrão</p>
+                                    <p className="text-sm font-medium text-gray-300 hover:bg-gray-700">Envio padrão</p>
                                     <p className="text-xs text-gray-500">Em até 21 dias úteis</p>
                                 </div>
                             </label>
@@ -275,10 +275,10 @@ export default function SellPage() {
 
                     {/* Botões de ação */}
                     <div className="flex gap-4 pt-4">
-                        <button className="flex-1 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors hover:scale-105 hover:shadow-lg hover:shadow-blue-300 hover:transition-transform">
+                        <button className="flex-1 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg transition-colors hover:shadow-lg hover:shadow-blue-700 hover:transition-transform hover:scale-105">
                             Publicar anúncio
                         </button>
-                        <button className="px-6 py-3 bg-white border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors hover:scale-105 hover:shadow-lg hover:shadow-gray-300 hover:transition-transform">
+                        <button className="px-6 py-3 bg-white border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors hover:scale-105 hover:shadow-lg hover:transition-transform">
                             Guardar rascunho
                         </button>
                     </div>
