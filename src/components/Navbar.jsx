@@ -4,6 +4,7 @@ import UserDropdown from './Dropdown.jsx';
 import Footer from './Footer.jsx';
 import Suggestions from './Suggestions.jsx';
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo/logo-atual.svg'; // Certifique-se de que o caminho para o logo está correto
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -65,9 +66,15 @@ export default function Navbar() {
         <nav className="w-full flex items-center p-3 hover:shadow-md">
             <div className="container mx-auto flex items-center justify-between md:justify-start">
                 {/* Logo */}
-                <div className="font-bold text-xl ml-10 mr-7 flex items-center">
+                <div className="ml-10 mr-7 flex items-center">
                     {/* SVG Logo */}
-                    <Link to="/"><img src="/images/logo/logo-atual.png" alt="SkyTrade Logo" className="h-7 w-auto ml-2 inline-block" /></Link>
+                    <Link to="/" className="flex items-center max-h-20">
+                        <img 
+                            src={logo} 
+                            alt="Trade2Fly Logo" 
+                            className="h-6 mr-5 w-auto"
+                        />
+                    </Link>
                 </div>
 
                 {/* Search Bar com Sugestões */}

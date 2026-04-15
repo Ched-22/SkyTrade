@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Categories() {
     return (
-        <div className="container mx-auto border-b">
+        <div className="container mx-auto border-b border-gray-500">
                         {/* Links - Desktop */}
                         <ul className="hidden md:flex items-center justify-center space-x-8 py-2">
                             <li>

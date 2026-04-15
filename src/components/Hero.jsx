@@ -10,9 +10,9 @@ const Hero = () => {
             </div>
             
             <div 
-                className="w-full py-16 border-b min-h-[500px] md:min-h-[600px] relative"
+                className="w-full py-16 border-b border-gray-500 min-h-[500px] md:min-h-[600px] relative"
                 style={{ 
-                    backgroundImage: "url('/images/banners/best-sellers.jpg')",
+                    backgroundImage: "url('/images/banners/parachutebg.png')",
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
@@ -20,7 +20,7 @@ const Hero = () => {
                 }}
             >
                 {/* Overlay para controlar opacidade */}
-                <div className="absolute inset-0 bg-white/70"></div>
+                <div className="absolute inset-0 bg-gray-900/70"></div>
 
                 <div className="relative z-10">
                     <div className="container mx-auto px-4 py-10 md:py-16">
