@@ -27,13 +27,13 @@ const Hero = () => {
                         <div className="max-w-3xl mx-auto text-center">
                             
                             {/* Título */}
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-300 mb-6 leading-tight">
                                 Pronto para ser um <br />
-                                <span className="text-blue-600">paraquedista?</span>
+                                <span className="text-[#459ff6]">paraquedista?</span>
                             </h1>
                             
                             {/* Subtítulo */}
-                            <p className="text-gray-700 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                            <p className="text-[#bdb7af] text-lg md:text-xl mb-10 max-w-2xl mx-auto">
                                 Milhares de pessoas já estão vendendo seus equipamentos usados. Junte-se à comunidade!
                             </p>
                             
@@ -44,7 +44,7 @@ const Hero = () => {
                                         Vender agora
                                     </button>
                                 </Link>
-                                <button className="bg-white hover:bg-blue-600 hover:text-white border-2 border-blue-600 font-bold py-4 px-10 rounded-lg text-lg transition-colors duration-300 hover:shadow-lg hover:scale-105">
+                                <button className="bg-gray-800 text-gray-300 hover:bg-blue-600 hover:text-gray-200 border-blue-600 font-bold py-4 px-10 rounded-lg text-lg transition-colors duration-300 hover:shadow-lg hover:scale-105">
                                     Descubra como funciona
                                 </button>
                             </div>
@@ -53,16 +53,16 @@ const Hero = () => {
                             <div className="mt-12 pt-8 border-t border-gray-200">
                                 <div className="flex flex-wrap justify-center gap-8 md:gap-16">
                                     <div className="text-center">
-                                        <div className="text-3xl md:text-4xl font-bold text-blue-600 animate-bounce">+121K</div>
-                                        <div className="text-gray-700">Itens vendidos</div>
+                                        <div className="text-3xl md:text-4xl font-bold text-[#459ff6] animate-bounce">+121K</div>
+                                        <div className="text-[#bdb7af]">Itens vendidos</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-3xl md:text-4xl font-bold text-blue-600 animate-bounce">+52K</div>
-                                        <div className="text-gray-700">Vendedores ativos</div>
+                                        <div className="text-3xl md:text-4xl font-bold text-[#459ff6] animate-bounce">+52K</div>
+                                        <div className="text-[#bdb7af]">Vendedores ativos</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-3xl md:text-4xl font-bold text-blue-600 animate-bounce">+99,7%</div>
-                                        <div className="text-gray-700">Satisfação</div>
+                                        <div className="text-3xl md:text-4xl font-bold text-[#459ff6] animate-bounce">+99,7%</div>
+                                        <div className="text-[#bdb7af]">Satisfação</div>
                                     </div>
                                 </div>
                             </div>

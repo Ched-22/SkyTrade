@@ -146,7 +146,7 @@ export default function Navbar() {
                     <UserDropdown />
                     {/* Botão Login - Desktop */}
                     <Link to="/login">
-                        <button className="hidden md:flex ml-4 bg-transparent border border-blue-600 hover:border-blue-600 text-blue-600 hover:text-white px-6 py-1 rounded-lg hover:bg-blue-600 font-bold transition-colors hover:shadow-lg hover:scale-105 hover:duration-300 hover:ease-in-out" >
+                        <button className="hidden md:flex ml-4 bg-transparent text-blue-600 hover:text-gray-200 px-6 py-1 rounded-lg hover:border-blue-600 hover:bg-blue-600 font-bold transition-colors hover:shadow-lg hover:scale-105 hover:duration-300 hover:ease-in-out" >
                             Criar conta | Login
                         </button>
                     </Link>

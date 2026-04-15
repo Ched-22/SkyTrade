@@ -235,10 +235,10 @@ const Cards = () => {
         <div className="max-w-7xl mx-auto px-4 py-8">
             {/* Header com título e filtros */}
             <div className="mb-10">
-                <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+                <h1 className="text-3xl md:text-4xl font-bold text-[#d6d3cd] mb-2">
                     Descobre as melhores peças em segunda mão
                 </h1>
-                <p className="text-gray-600 mb-8">
+                <p className="text-[#b1aaa0] mb-8">
                     Mais de 10.000 artigos à venda • Entrega rápida • Compras seguras
                 </p>
                 
@@ -250,8 +250,8 @@ const Cards = () => {
                             onClick={() => setActiveFilter(category)}
                             className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                                 activeFilter === category
-                                    ? 'bg-blue-600 text-white shadow-md'
-                                    : 'bg-white text-gray-700 border border-gray-300 hover:border-blue-500 hover:text-blue-600'
+                                    ? 'bg-blue-600 text-[#e8e6e3] shadow-md'
+                                    : 'bg-[#181a1b] text-[#bdb7af] border border-[#736b5e] hover:border-blue-600 hover:text-blue-600'
                             }`}
                         >
                             {category}
@@ -261,11 +261,11 @@ const Cards = () => {
                 
                 {/* Contador de produtos */}
                 <div className="flex items-center justify-between mt-6">
-                    <p className="text-gray-700">
+                    <p className="text-[#bdb7af]">
                         <span className="font-semibold">{filteredProducts.length}</span> produtos encontrados
                     </p>
                     <div className="flex items-center gap-4">
-                        <select className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <select className="px-3 py-2 bg-[#181a1b] text-[#e8e6e3] border border-[#736b5e] rounded-lg text-sm focus:outline-none focus:ring-2">
                             <option>Ordenar por: Relevância</option>
                             <option>Mais recentes</option>
                             <option>Preço: mais baixo primeiro</option>
@@ -280,7 +280,7 @@ const Cards = () => {
                 {filteredProducts.map((product) => (
                     <div 
                         key={product.id} 
-                        className="bg-gray-900 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group cursor-pointer"
+                        className="bg-gray-900 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-[#736b5e] group cursor-pointer"
                     >
                         {/* Container da imagem */}
                         <div className="relative overflow-hidden">
@@ -405,9 +405,9 @@ const Cards = () => {
             </div>
 
             {/* Botão para carregar mais */}
-            <div className="text-center mt-12">
-                <button className="px-8 py-3 bg-white border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-all duration-200">
-                    Carregar mais produtos
+            <div className="text-center mt-4">
+                <button className="bg-none text-gray-300 hover:bg-blue-600 hover:text-gray-200 border-blue-600 font-bold py-4 px-10 rounded-lg text-lg transition-colors duration-300 hover:shadow-lg hover:scale-105">
+                    Ver mais produtos
                 </button>
             </div>
 
@@ -419,7 +419,7 @@ const Cards = () => {
                         Ganha dinheiro extra e dá uma nova vida às tuas peças
                     </p>
                     <Link to="/sell">
-                        <button className="px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-blue-700 hover:text-white transition-colors duration-200 hover:scale-105">
+                        <button className="bg-blue-600 hover:bg-blue-200 text-white hover:text-blue-600 font-bold py-4 px-10 rounded-lg text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:scale-105">
                             Começar a vender
                         </button>
                     </Link>
