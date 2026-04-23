@@ -40,7 +40,7 @@ export default function SellPage() {
                 {/* Formulário principal */}
                 <div className="space-y-8">
                     {/* Secção de Fotos - Destaque visual como no Vinted */}
-                    <div className="bg-gray-800 rounded-xl shadow-sm border border-gray-700 p-6">
+                    <div className="bg-gray-800 rounded-xl shadow-md border border-gray-700 p-6">
                         <h2 className="text-lg font-semibold text-gray-300 mb-4">Fotos</h2>
                         <div className="grid grid-cols-3 sm:grid-cols-5 gap-4">
                             {/* Botão de adicionar foto */}
@@ -275,7 +275,7 @@ export default function SellPage() {
 
                     {/* Botões de ação */}
                     <div className="flex gap-4 pt-4">
-                        <button className="flex-1 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg transition-colors hover:shadow-lg hover:shadow-blue-700 hover:transition-transform hover:scale-105">
+                        <button className="flex-1 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg transition-colors hover:shadow-lg hover:transition-transform hover:scale-105">
                             Publicar anúncio
                         </button>
                         <button className="px-6 py-3 bg-white border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors hover:scale-105 hover:shadow-lg hover:transition-transform">
@@ -289,7 +289,7 @@ export default function SellPage() {
                             <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
-                            Publicar anúncios na Vinted é gratuito. Apenas pagas quando vendes.
+                            Publicar anúncios na Trade2Fly é gratuito. Apenas pagas quando vendes.
                         </p>
                     </div>
                 </div>
