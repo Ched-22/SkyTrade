@@ -31,7 +31,7 @@ const UserDropdown = () => {
         <div className="relative" ref={dropdownRef}>
             {/* Botão do usuário */}
             <button
-                className="p-2 rounded-md text-xl text-gray-700 hover:text-blue-600 hover:bg-gray-300 transition-colors"
+                className="p-2 rounded-md text-xl text-gray-300 hover:text-blue-600 hover:bg-gray-700 transition-colors"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             >
                 <img src="/images/icons/user.svg" alt="Ícone perfil" className="h-6 w-6" />
@@ -39,33 +39,33 @@ const UserDropdown = () => {
 
             {/* Dropdown */}
             {isDropdownOpen && (
-                <div className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                <div className="absolute right-0 mt-2 w-64 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2 z-50">
                     
                     {/* Header do dropdown */}
-                    <div className="px-4 py-3 border-b">
+                    <div className="px-4 py-3 border-b border-gray-700">
                         <div className="flex items-center space-x-3">
                             <div className="h-10 w-10 rounded-full bg-blue-600 flex items-center justify-center">
                                 <span className="text-white font-bold text-lg">U</span>
                             </div>
                             <div>
-                                <p className="font-medium text-gray-900 text-lg">Usuário</p>
-                                <p className="text-sm text-gray-500">Bem-vindo de volta!</p>
+                                <p className="font-medium text-gray-300 text-lg">Usuário</p>
+                                <p className="text-sm text-gray-400">Bem-vindo de volta!</p>
                             </div>
                         </div>
                     </div>
 
                     {/* Itens do menu */}
-                    <div className="py-2 text-sm">
+                    <div className="pt-2 text-sm">
                         {menuItems.map((item, index) => (
                             <a
                                 key={index}
                                 href={item.href}
-                                className={`flex items-center justify-between px-4 py-3 hover:bg-gray-50 ${item.isLogout ? 'border-t mt-2' : ''}`}
+                                className={`flex items-center justify-between px-4 py-3 hover:bg-gray-700 ${item.isLogout ? 'border-t mt-2' : ''}`}
                                 onClick={() => setIsDropdownOpen(false)}
                             >
                                 <div className="flex items-center space-x-3">
                                     <span className="text-xl">{item.icon}</span>
-                                    <span className={`font-medium ${item.isLogout ? 'text-red-600' : 'text-gray-700'}`}>
+                                    <span className={`font-medium ${item.isLogout ? 'text-red-600' : 'text-gray-300'}`}>
                                         {item.label}
                                     </span>
                                 </div>

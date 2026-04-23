@@ -63,9 +63,9 @@ export default function Searchbar() {
                 <input
                     type="text"
                     placeholder="Buscar itens..."
-                    className="w-full px-4 py-2 pl-10 pr-10 rounded-lg border border-gray-300 
+                    className="w-full px-4 py-2 pl-10 pr-10 rounded-lg bg-gray-800 border border-gray-700 
                             focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
-                            placeholder-gray-500 text-gray-700"
+                            placeholder-gray-500 text-gray-500"
                     value={searchQuery}
                     onChange={handleSearchChange}
                     onKeyDown={handleKeyDown}

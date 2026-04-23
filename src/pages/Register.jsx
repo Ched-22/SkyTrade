@@ -18,15 +18,15 @@ export default function Register() {
                 <form className="space-y-4">
                     <div>
                         <label htmlFor="email" className="block text-sm font-medium text-gray-300">Email</label>
-                        <input type="email" id="email" name="email" required className="w-full px-3 py-2 mt-1 border rounded-md focus:outline-none focus:ring focus:ring-blue-200" />
+                        <input type="email" id="email" name="email" placeholder="Digite seu email..." required className="w-full bg-gray-700 px-3 py-2 mt-1 border border-gray-700 rounded-md focus:outline-none focus:ring focus:ring-blue-200" />
                     </div>
                     <div>
                         <label htmlFor="password" className="block text-sm font-medium text-gray-300">Senha</label>
-                        <input type="password" id="password" name="password" required className="w-full px-3 py-2 mt-1 border rounded-md focus:outline-none focus:ring focus:ring-blue-200" />
+                        <input type="password" id="password" name="password" placeholder="Digite sua senha..." required className="w-full bg-gray-700 px-3 py-2 mt-1 border border-gray-700 rounded-md focus:outline-none focus:ring focus:ring-blue-200" />
                     </div>
                     <button type="submit" className="w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-200">Registrar-se</button>
                 </form>
-                <p className="text-sm text-center text-gray-600">Já tem uma conta? <a href="/login" className="text-blue-600 hover:underline">Entrar</a></p>
+                <p className="text-sm text-center text-gray-400">Já tem uma conta? <a href="/login" className="text-blue-600 hover:underline">Entrar</a></p>
             </div>
         </div>
     );

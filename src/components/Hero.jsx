@@ -40,13 +40,15 @@ const Hero = () => {
                             {/* Botões */}
                             <div className="flex flex-col sm:flex-row justify-center gap-4">
                                 <Link to="/sell">
-                                    <button className="bg-blue-600 hover:bg-blue-200 text-white hover:text-blue-600 font-bold py-4 px-10 rounded-lg text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:scale-105">
+                                    <button className="bg-blue-600 hover:bg-blue-200 text-white hover:text-blue-600 font-bold py-4 px-20 rounded-lg text-lg transition-colors duration-300 shadow-md hover:shadow-lg hover:scale-105">
                                         Vender agora
                                     </button>
                                 </Link>
-                                <button className="bg-gray-800 text-gray-300 hover:bg-blue-600 hover:text-gray-200 border-blue-600 font-bold py-4 px-10 rounded-lg text-lg transition-colors duration-300 hover:shadow-lg hover:scale-105">
-                                    Descubra como funciona
-                                </button>
+                                <a href="#how-it-works" className="flex items-center justify-center">
+                                    <button className="bg-gray-800 text-gray-300 hover:bg-blue-600 hover:text-gray-200 border-blue-600 font-bold py-4 px-10 md:px-10 rounded-lg text-lg transition-colors duration-300 hover:shadow-lg hover:scale-105">
+                                        Descubra como funciona
+                                    </button>
+                                </a>
                             </div>
                             
                             {/* Estatísticas */}
