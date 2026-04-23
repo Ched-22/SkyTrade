@@ -154,7 +154,7 @@ export default function Navbar() {
 
                 {/* Menu Toggle */}
                 <button
-                    className="md:hidden p-2 rounded-md text-xl text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors"
+                    className="md:hidden p-2 rounded-md text-xl text-gray-700 hover:text-blue-600 hover:bg-gray-300 transition-colors"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                     ☰
@@ -163,14 +163,18 @@ export default function Navbar() {
                 {/* Links */}
                 {/* Menu Mobile Dropdown - Full Screen */}
                 {isMenuOpen && (
-                    <div className="md:hidden fixed inset-0 z-50 bg-white flex flex-col">
+                    <div className="md:hidden fixed inset-0 z-50 bg-gray-900 flex flex-col">
                         {/* Header do menu mobile */}
-                        <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-white shrink-0">
+                        <div className="flex items-center justify-between p-4 border-b border-gray-700 bg-gray-900 shrink-0">
                             <div className="font-bold text-xl flex items-center">
-                                <Link to="/" className="flex items-center">
-                                    <span className="font-light flex items-center">Trade<span className="text-blue-600 text-2xl font-mono">2</span>Fly</span>
+                                {/* SVG Logo */}
+                                <Link to="/" className="flex p-3 items-center max-h-20">
+                                    <img 
+                                        src={logo} 
+                                        alt="Trade2Fly Logo" 
+                                        className="h-6 mr-5 w-auto"
+                                    />
                                 </Link>
-                                <Link to="/"><img src="/images/logo/skytrade-logo.svg" alt="SkyTrade Logo" className="h-7 w-auto ml-2 inline-block" /></Link>
                             </div>
                             <button
                                 onClick={() => setIsMenuOpen(false)}
@@ -181,13 +185,13 @@ export default function Navbar() {
                         </div>
                         
                         {/* Conteúdo principal - ESSA é a parte que rola */}
-                        <div className="flex-1 overflow-y-auto">
+                        <div className="flex-1 overflow-y-auto mt-2">
                             <div className="p-4">
                                 {/* Botão Login - no topo como no Vinted */}
                                 <div className="mb-6">
                                     <Link to="/login">
                                         <button 
-                                            className="w-96 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors text-lg hover:shadow-lg hover:scale-105 hover:duration-300 hover:ease-in-out"
+                                            className="w-10/12 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors text-lg hover:shadow-lg hover:scale-105 hover:duration-300 hover:ease-in-out"
                                             onClick={() => setIsMenuOpen(false)}
                                         >
                                             Criar conta | Login
@@ -199,7 +203,7 @@ export default function Navbar() {
                                 <div className="mb-8">
                                     <Link to="/sell">
                                         <button 
-                                            className="w-96 py-3 bg-white border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors text-lg hover:shadow-lg hover:scale-105 hover:duration-300 hover:ease-in-out"
+                                            className="w-10/12 py-3 bg-gray-800 border border-gray-800 text-gray-300 font-bold rounded-lg hover:bg-blue-600 transition-colors text-lg hover:shadow-lg hover:scale-105 hover:duration-300"
                                             onClick={() => setIsMenuOpen(false)}
                                         >
                                             Vender agora
@@ -210,42 +214,42 @@ export default function Navbar() {
                                 {/* Links do menu - estilo Vinted */}
                                 <div className="space-y-1">
                                     <Link to="/profile" 
-                                        className="flex items-center px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-800 text-lg"
+                                        className="flex items-center px-4 py-3 hover:bg-gray-700 rounded-lg text-gray-300 text-lg"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         <span className="mr-3 text-xl">👤</span>
                                         Perfil
                                     </Link>
                                     <Link to="/" 
-                                        className="flex items-center px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-800 text-lg"
+                                        className="flex items-center px-4 py-3 hover:bg-gray-700 rounded-lg text-gray-300 text-lg"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         <span className="mr-3 text-xl">📦</span>
                                         Navegar
                                     </Link>
                                     <Link to="/sell" 
-                                        className="flex items-center px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-800 text-lg"
+                                        className="flex items-center px-4 py-3 hover:bg-gray-700 rounded-lg text-gray-300 text-lg"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         <span className="mr-3 text-xl">💰</span>
                                         Vender
                                     </Link>
                                     <Link to="/chat" 
-                                        className="flex items-center px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-800 text-lg"
+                                        className="flex items-center px-4 py-3 hover:bg-gray-700 rounded-lg text-gray-300 text-lg"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         <span className="mr-3 text-xl">📨</span>
                                         Mensagens
                                     </Link>
                                     <Link to="/favorites" 
-                                        className="flex items-center px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-800 text-lg"
+                                        className="flex items-center px-4 py-3 hover:bg-gray-700 rounded-lg text-gray-300 text-lg"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         <span className="mr-3 text-xl">❤️</span>
                                         Favoritos
                                     </Link>
                                     <Link to="/settings" 
-                                        className="flex items-center px-4 py-3 hover:bg-gray-50 rounded-lg text-gray-800 text-lg"
+                                        className="flex items-center px-4 py-3 hover:bg-gray-700 rounded-lg text-gray-300 text-lg"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         <span className="mr-3 text-xl">⚙️</span>
@@ -257,7 +261,7 @@ export default function Navbar() {
                             
                             {/* O Footer vai aqui DENTRO do container de scroll */}
                             {/* Ele só aparece quando você rola até o final */}
-                            <div className="mt-8 border-t border-gray-200">
+                            <div className="mt-8 border-t border-gray-700">
                                 <div className="p-4">
                                     <Footer />
                                 </div>
