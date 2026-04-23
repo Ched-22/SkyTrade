@@ -29,7 +29,7 @@ const Hero = () => {
                             {/* Título */}
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-300 mb-6 leading-tight">
                                 Pronto para ser um <br />
-                                <span className="text-[#459ff6]">paraquedista? TESTE</span>
+                                <span className="text-[#459ff6]">paraquedista?</span>
                             </h1>
                             
                             {/* Subtítulo */}
